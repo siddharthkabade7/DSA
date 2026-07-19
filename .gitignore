@@ -1,2 +1,12 @@
-classesandobject.exe
 
+
+# Ignore executable files
+*.exe
+
+# Ignore object files
+*.o
+*.obj
+
+# Ignore build folders
+build/
+bin/
