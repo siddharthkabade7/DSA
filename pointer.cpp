@@ -10,6 +10,11 @@ class PointerExample {
         cout<<"address of a:"<<ptr<<endl;
         cout << "Address of a: " << &a << endl;
         cout<< "Value at pointer ptr: " << *ptr << endl; // dereferencing pointer
+
+        //pointer to pointer
+        int** ptr2 = &ptr; // pointer to pointer
+        cout << "Address of ptr: " << &ptr << endl; 
+        cout << "Value at pointer ptr2: " << *ptr2 << endl; // dereferencing pointer to pointer
     }
 };
 int main(){
