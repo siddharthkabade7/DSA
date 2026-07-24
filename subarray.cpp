@@ -2,18 +2,18 @@
 #include<vector>
 using namespace std;
 
-// // // void print_subarrray(int arr[], int n){
-// // //     for(int st=0;st<n;st++){
-// // //         for(int end=st;end<n;end++){
-// // //             for(int i=st;i<=end;i++){
-// // //                 cout<<arr[i];
-// // //             }
-// // //             cout<<" ";
-// // //         }
-// // //         cout<<endl;
-// // //     }
+void print_subarrray(int arr[], int n){
+    for(int st=0;st<n;st++){
+        for(int end=st;end<n;end++){
+            for(int i=st;i<=end;i++){
+                cout<<arr[i];
+            }
+            cout<<" ";
+        }
+        cout<<endl;
+    }
 
-// // // }
+}
 
 // // void max_sum_subarray(int arr[], int n){
 // //     int max_sum=arr[0];
@@ -52,24 +52,27 @@ using namespace std;
 // }
 
 
-class Solution {
-public:
-    int maxSubArray(vector<int>& nums) {
-        int cs =0;
-        int ms= 0;
-        for(int n : nums){
-            cs+=n;
-            ms=max(cs,ms);
-            if(cs<0){
-                cs=0;
-            }
-        }
-        return ms;
-    }
-};
+// class Solution {
+// public:
+//     int maxSubArray(vector<int>& nums) {
+//         int cs =0;
+//         int ms= 0;
+//         for(int n : nums){
+//             cs+=n;
+//             ms=max(cs,ms);
+//             if(cs<0){
+//                 cs=0;
+//             }
+//         }
+//         return ms;
+//     }
+// };
 
 int main(){
-    Solution s;
-    vector<int> nums = {-2,1,-3,4,-1,2,1,-5,4};
-    cout<<s.maxSubArray(nums);
+    // Solution s;
+    // vector<int> nums = {-2,1,-3,4,-1,2,1,-5,4};
+    // cout<<s.maxSubArray(nums);
+    int arr[]={1,2,3,4,5};
+    int n= sizeof(arr)/sizeof(1);
+    print_subarrray(arr,n);
 }
