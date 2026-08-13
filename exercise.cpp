@@ -28,18 +28,28 @@ public:
 
 class hybridcalc : public simplecalc, public scientificcalc
 {
+    int a, b;
+
+public:
+    void get_nums()
+    {
+        cout << "Enter two numbers: ";
+        cin >> a >> b;
+    }
+
+    void calculate()
+    {
+        operations(a, b);
+        scientific_operations(a, b);
+    }
 };
 
 int main()
 {
     hybridcalc calc;
 
-    int a, b;
-    cout << "Enter two numbers: ";
-    cin >> a >> b;
-
-    calc.operations(a, b);
-    calc.scientific_operations(a, b);
+    calc.get_nums();
+    calc.calculate();
 
     return 0;
 }
