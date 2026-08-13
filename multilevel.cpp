@@ -51,6 +51,11 @@ void result::display(){
 
 
 int main(){
+    result sid;
+    sid.set_roll_no(134);
+
+    sid.set_marks(99.0 , 96.0);
+    sid.display();
 
     
 
